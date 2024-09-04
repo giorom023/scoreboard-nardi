@@ -1,0 +1,210 @@
+body {
+    padding-top: 50px;
+    padding-bottom: 20px;
+}
+
+.wrap,
+.wrap * {
+    margin: 0;
+    padding: 0;
+    border: none;
+}
+
+.wrap {
+    position: relative;
+}
+
+.wrap > .backgammon {
+    margin: 0 auto;
+    width: 640px;
+    height: 600px;
+    border: 10px groove saddlebrown;
+    background: MenuText;
+    clear: both;
+}
+
+.wrap > .backgammon > .midLane {
+    width: 40px;
+    height: 300px;
+    background: MenuText;
+    float: left;
+}
+
+.wrap > .backgammon > .point {
+    width: 50px;
+    height: 300px;
+    border-radius: 150px 150px 0 0;
+    background: burlywood;
+    float: left;
+    border-top: 0 double rgba(255, 15, 15, 0.3);
+}
+
+.wrap > .backgammon > .point:nth-child(n+14) {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    border-radius: 0 0 150px 150px;
+    border-top: none;
+    border-bottom: 0 double rgba(255, 15, 15, 0.3);
+}
+
+.wrap > .backgammon > .point.over {
+    box-sizing: border-box;
+    border-width: 20px;
+}
+
+.checker {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin: 0 auto;
+    cursor: pointer;
+}
+
+.wrap > .backgammon > .point > .checker:nth-child(n+8) {
+    display: none;
+}
+
+[data-type="white"] {
+    background: ivory;
+    box-shadow: 0 0 10px 5px rgba(254, 243, 181, 0.72) inset;
+}
+
+[data-type="black"] {
+    background: ThreeDDarkShadow;
+    box-shadow: 0 0 10px 5px rgba(25, 23, 23, 0.72) inset;
+}
+
+.wrap > .backgammon > .point > .checker:hover {
+    box-shadow: 0 0 1px 1px black;
+}
+
+.controller {
+    text-align: center;
+    width: 400px;
+    height: 300px;
+    margin: 20px auto;
+}
+
+.controller > * {
+    width: 100px;
+    height: 50px;
+    float: left;
+}
+
+.controller > button {
+    font-size: 20px;
+    text-transform: uppercase;
+    font-weight: bold;
+    margin: 0 auto;
+    border-radius: 20px;
+    cursor: pointer;
+    background: #222;
+    color: #aaa;
+    display: inline-block;
+    float: none;
+}
+
+.controller > button:hover {
+    background: linear-gradient(#555, black);
+    text-shadow: 0 0 10px #fff;
+    color: darkblue;
+    box-shadow: 1px 1px 2px 2px darkblue;
+}
+
+.controller *:last-child {
+    float: right;
+}
+
+.hidden {
+    display: none !important;
+}
+
+#turnOf {
+    font-size: 18px;
+    text-align: center;
+    font-weight: bold;
+    font-style: oblique;
+}
+
+#movesLeft > span {
+    font-size: 20px;
+    font-weight: bolder;
+    font-style: oblique;
+    float: left;
+    width: 45px;
+    height: 45px;
+    line-height: 45px;
+    border-radius: 10px;
+    border: 1px solid #222;
+    box-sizing: border-box;
+    box-shadow: inset 2px -1px 5px 2px brown;
+    background: bisque;
+}
+
+#movesLeft > span:last-child {
+    float: right;
+}
+
+[disabled] {
+    background: grey !important;
+    pointer-events: none;
+}
+
+#jail {
+    position: absolute;
+    left: 0;
+    width: 50px;
+    height: 500px;
+}
+
+#out {
+    position: absolute;
+    right: 0;
+    width: 50px;
+    height: 500px;
+}
+#colorPicker {
+    position: fixed;
+    top: 20%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 200px;
+    padding: 10px;
+    background: white;
+    border: 1px solid black;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    z-index: 1000;
+}
+
+#colorOptions {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.color-option {
+    width: 40px;
+    height: 40px;
+    margin: 5px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+.scoreboard {
+    display: flex;
+    justify-content: space-around;
+    margin: 20px;
+}
+
+.score {
+    text-align: center;
+}
+
+.score h3 {
+    margin: 0;
+    font-size: 1.2em;
+}
+
+.score span {
+    font-size: 2em;
+    display: block;
+}

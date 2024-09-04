@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Backgammon</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="wrap">
+        <div class="jail" id="jail"></div>
+        <div class="out" id="out"></div>
+        <div class="backgammon" id="backgammon">
+            <div class="point" data-id="12">
+                <div class="checker" data-type="white"></div>
+                <div class="checker" data-type="white"></div>
+                <div class="checker" data-type="white"></div>
+                <div class="checker" data-type="white"></div>
+                <div class="checker" data-type="white"></div>
+            </div>
+            <div class="point" data-id="11"></div>
+            <div class="point" data-id="10"></div>
+            <div class="point" data-id="9"></div>
+            <div class="point" data-id="8">
+                <div class="checker" data-type="black"></div>
+                <div class="checker" data-type="black"></div>
+                <div class="checker" data-type="black"></div>
+            </div>
+            <div class="point" data-id="7"></div>
+            <div class="midLane"></div>
+            <div class="point" data-id="6" data-home="black">
+                <div class="checker" data-type="black"></div>
+                <div class="checker" data-type="black"></div>
+                <div class="checker" data-type="black"></div>
+                <div class="checker" data-type="black"></div>
+                <div class="checker" data-type="black"></div>
+            </div>
+            <div class="point" data-id="5" data-home="black"></div>
+            <div class="point" data-id="4" data-home="black"></div>
+            <div class="point" data-id="3" data-home="black"></div>
+            <div class="point" data-id="2" data-home="black"></div>
+            <div class="point" data-id="1" data-home="black">
+                <div class="checker" data-type="white"></div>
+                <div class="checker" data-type="white"></div>
+            </div>
+            <div class="point" data-id="13">
+                <div class="checker" data-type="black"></div>
+                <div class="checker" data-type="black"></div>
+                <div class="checker" data-type="black"></div>
+                <div class="checker" data-type="black"></div>
+                <div class="checker" data-type="black"></div>
+            </div>
+            <div class="point" data-id="14"></div>
+            <div class="point" data-id="15"></div>
+            <div class="point" data-id="16"></div>
+            <div class="point" data-id="17">
+                <div class="checker" data-type="white"></div>
+                <div class="checker" data-type="white"></div>
+                <div class="checker" data-type="white"></div>
+            </div>
+            <div class="point" data-id="18"></div>
+            <div class="midLane"></div>
+            <div class="point" data-id="19" data-home="white">
+                <div class="checker" data-type="white"></div>
+                <div class="checker" data-type="white"></div>
+                <div class="checker" data-type="white"></div>
+                <div class="checker" data-type="white"></div>
+                <div class="checker" data-type="white"></div>
+            </div>
+            <div class="point" data-id="20" data-home="white"></div>
+            <div class="point" data-id="21" data-home="white"></div>
+            <div class="point" data-id="22" data-home="white"></div>
+            <div class="point" data-id="23" data-home="white"></div>
+            <div class="point" data-id="24" data-home="white">
+                <div class="checker" data-type="black"></div>
+                <div class="checker" data-type="black"></div>
+            </div>
+        </div>
+        <div class="controller">
+            <button type="button" id="btnStart">Start</button>
+            <button type="button" id="btnRoll" class="hidden">Roll</button>
+            <button type="button" id="btnChangeColor">Change Color</button>
+            <div id="movesLeft" class="hidden">
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </div>
+    <!-- Color Picker Container -->
+    <div id="colorPicker" class="hidden">
+        <div id="colorOptions"></div>
+        <button type="button" id="btnCloseColorPicker">Close</button>
+        <div id="scoreboard">
+            <h2>Scoreboard</h2>
+            <div id="scoreWhite">White: <span id="scoreWhiteValue">0</span></div>
+            <div id="scoreBlack">Black: <span id="scoreBlackValue">0</span></div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
